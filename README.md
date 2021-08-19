@@ -1,1 +1,1 @@
-# Birdy---a-twitter-clone
+# Birdy: a twitter clone
