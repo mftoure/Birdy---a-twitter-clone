@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name>Birdy</display-name>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>servlets.Authentification.LoginServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/auth</url-pattern>
+  </servlet-mapping>
+ 
+ <servlet>
+    <servlet-name>CreateUser</servlet-name>
+    <servlet-class>servlets.User.CreateUserServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>CreateUser</servlet-name>
+    <url-pattern>/signin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DeleteUser</servlet-name>
+    <servlet-class>servlets.User.DeleteUserServlet</servlet-class>
+  </servlet>
+  
+   
+  <servlet-mapping>
+    <servlet-name>DeleteUser</servlet-name>
+    <url-pattern>/unregister</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CompleteProfile</servlet-name>
+    <servlet-class>servlets.User.CompleteProfileServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>CompleteProfile</servlet-name>
+    <url-pattern>/profile/completeprofile</url-pattern>
+ </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>servlets.Authentification.LogoutServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AddFriend</servlet-name>
+    <servlet-class>servlets.Friend.AddFriendServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>AddFriend</servlet-name>
+    <url-pattern>/profile/follow</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RemoveFriend</servlet-name>
+    <servlet-class>servlets.Friend.RemoveFriendServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>RemoveFriend</servlet-name>
+    <url-pattern>/profile/unfollow</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FriendsList</servlet-name>
+    <servlet-class>servlets.Friend.FriendsListServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>FriendsList</servlet-name>
+    <url-pattern>/profile/following</url-pattern>
+  </servlet-mapping>
+ 
+ <servlet>
+    <servlet-name>AddMessage</servlet-name>
+    <servlet-class>servlets.Messages.AddMessageServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>AddMessage</servlet-name>
+    <url-pattern>/tweet</url-pattern>
+  </servlet-mapping>
+
+
+ <servlet>
+    <servlet-name>RemoveMessage</servlet-name>
+    <servlet-class>servlets.Messages.RemoveMessageServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>RemoveMessage</servlet-name>
+    <url-pattern>/untweet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>ListMessages</servlet-name>
+    <servlet-class>servlets.Messages.ListMessagesServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>ListMessages</servlet-name>
+    <url-pattern>/tweets</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AddComment</servlet-name>
+    <servlet-class>servlets.Comments.AddCommentServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>AddComment</servlet-name>
+    <url-pattern>/tweet/comment</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>RemoveComment</servlet-name>
+    <servlet-class>servlets.Comments.RemoveCommentServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>RemoveComment</servlet-name>
+    <url-pattern>/tweet/removecomment</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>ListComments</servlet-name>
+    <servlet-class>servlets.Comments.ListCommentsServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>ListComments</servlet-name>
+    <url-pattern>/tweet/comments</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Like</servlet-name>
+    <servlet-class>servlets.Likes.LikeServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>Like</servlet-name>
+    <url-pattern>/tweet/like</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UnLike</servlet-name>
+    <servlet-class>servlets.Likes.UnLikeServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>UnLike</servlet-name>
+    <url-pattern>/tweet/unlike</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ListLikes</servlet-name>
+    <servlet-class>servlets.Likes.ListLikesServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>ListLikes</servlet-name>
+    <url-pattern>/tweet/likes</url-pattern>
+  </servlet-mapping>
+ 
+  
+ 
+ <resource-ref>
+ 	<description>DB Connection</description>
+ 	<res-ref-name>jdbc/Database</res-ref-name>
+ 	<res-type>javax.sql.DataSource</res-type>
+ 	<res-auth>Container</res-auth>
+ </resource-ref> 
+ </web-app>
